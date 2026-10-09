@@ -18,8 +18,8 @@
 
 | 指标 | 数值 |
 |---|---|
-| 源码 | 37 个文件，约 **12,800 行**（引擎 2.5k / AI 3.7k / 游戏 4.7k / 调试 1.9k） |
-| 测试 | 14 个文件，约 **6,100 行，279 个用例**，全绿 |
+| 源码 | 40 个文件，约 **11,800 行**（引擎 2.1k / AI 3.0k / 游戏 4.0k / 调试 1.6k，其余为 `main.cpp` 与构建脚本） |
+| 测试 | 15 个 `.cpp`，约 **4,800 行，281 个用例**，全绿 |
 | 依赖 | raylib（窗口/渲染）、imgui（调参面板）、glm（数学）、nlohmann_json（配置），CMake FetchContent |
 | 构建期代码生成 | Python 扫描全部源码提取中文字形码点 → 生成 `GeneratedGlyphs.h` → 打进字体图集 |
 | 产物 | `TacticalAI-Sandbox`（可交互）、`TacticalAI-Tests`（无头回归） |
@@ -346,7 +346,7 @@ enemy->setLineOfSightQuery(makeLineOfSightQuery()); // 视线：两个点 → �
 
 # 4) 无头/可回归（CI 里跑的就是这两条）
 ./build/bin/TacticalAI-Sandbox.exe --headless --frames 3600 --dump
-./build/bin/TacticalAI-Tests.exe                # 279 个用例
+./build/bin/TacticalAI-Tests.exe                # 281 个用例
 ```
 
 ### 6.2 两分钟版（只讲三件事）

@@ -6,7 +6,7 @@
 
 ![自动演示：内置驾驶员 + AI 可视化](docs/images/demo.gif)
 
-`C++17` · `raylib` + `imgui` · `279 个单元测试` · `60Hz 固定步长` · `无头可回归`
+`C++17` · `raylib` + `imgui` · `281 个单元测试` · `60Hz 固定步长` · `无头可回归`
 
 ![对射与掩体](docs/images/gameplay.png) ![翻滚躲子弹](docs/images/dodge_roll.png)
 
