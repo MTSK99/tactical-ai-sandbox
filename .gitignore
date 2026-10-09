@@ -1,0 +1,85 @@
+# ---------------------------------------------------------------------------
+#  .gitignore
+# ---------------------------------------------------------------------------
+
+# --- 构建产物 ---
+build/
+build-*/
+out/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.ninja
+.ninja_deps
+.ninja_log
+compile_commands.json
+CTestTestfile.cmake
+
+# --- 二进制与库 ---
+bin/
+lib/
+*.exe
+*.dll
+*.so
+*.so.*
+*.dylib
+*.a
+*.lib
+*.pdb
+*.ilk
+*.exp
+
+# --- IDE ---
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.sln
+*.vcxproj*
+*.xcodeproj/
+.cache/
+.clangd/
+
+# --- 第三方依赖源码 ---
+# 由 scripts/fetch_dependencies.ps1 拉取，不入库。
+# 若你希望锁定版本、离线构建，删掉这几行并把 external/ 提交上去。
+external/*
+!external/.gitkeep
+
+# --- 操作系统 ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- 日志与临时文件 ---
+*.log
+*.tmp
+*.temp
+*.bak
+*~
+
+# --- 测试与覆盖率 ---
+Testing/
+*.gcno
+*.gcda
+*.gcov
+coverage/
+
+# --- 验证用临时构建目录 ---
+# 注意上面写的是 build-*/（带连字符），而实际目录叫 build_verify/（带下划线），
+# 所以它一直没被忽略、会被误提交。这里单独补一条。
+build_verify/
+build_verify-*/
+
+# --- AI 助手 / 工具的过程记录 ---
+# 会话笔记与记忆文件属于**工具状态**，不是项目源码，默认不入库。
+# 如果你希望把这些迭代过程一起公开（当作"我是怎么一步步做出来的"素材），
+# 删掉下面两行即可。
+.workbuddy/
+.codebuddy/
+
+# --- 编辑器本地配置 ---
+.editorconfig.local

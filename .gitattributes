@@ -1,0 +1,38 @@
+# ---------------------------------------------------------------------------
+#  .gitattributes
+#
+#  统一换行符：仓库内一律用 LF。
+#
+#  【为什么需要它】
+#  没有这个文件时，Windows 上 `core.autocrlf=true` 会在检出时把文本文件
+#  的 LF 转成 CRLF —— 于是同一份代码在不同机器上显示为"整文件被修改"，
+#  跨平台 CI 也会看到无意义的差异。这里显式声明 eol=lf，让工作区也保持
+#  LF，与当前代码一致，也和 Linux/macOS 完全对齐。
+# ---------------------------------------------------------------------------
+
+* text=auto eol=lf
+
+# --- 二进制资源：绝不做换行转换 ---
+# （text=auto 通常能自动识别二进制，但演示素材被"转换"一次就毁了，
+#   所以这里显式列出。）
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.mp4   binary
+*.ico   binary
+*.ttf   binary
+*.otf   binary
+
+# --- 构建产物与可执行文件 ---
+*.exe    binary
+*.dll    binary
+*.lib    binary
+*.a      binary
+*.pdb    binary
+*.so     binary
+*.dylib  binary
+
+# --- 让 GitHub 的语言统计准确（外部依赖不参与统计）---
+external/** linguist-vendored
+third_party/** linguist-vendored
