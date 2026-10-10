@@ -320,7 +320,7 @@ if (!resolveTargetPosition(blackboard_, targetPosition)) return Failure;
 
 判据必须用 `kTimeSinceSeenEnemy`（由 `Perception::timeSinceLastSeen` 写入，
 **只在真看见时归零**），不能用"确认目标"——否则等于没改。
-（`docs/ROADMAP.md` 里其实早就记过这条坑，只是没人把它用到开火上。）
+（这条坑其实早就记过，只是没人把它用到开火上。）
 
 ### 修复二：失联超过宽限期就离开交战分支
 

@@ -386,7 +386,7 @@ bool PerceptionSystem::canSee(glm::vec2 selfPosition, glm::vec2 selfFacing,
 1. `visible` 是"此刻看得见"；`confirmed` 是"我已经确认过他"。
    **丢失视线后 `confirmed` 仍为真，直到 `memoryDuration`（6 秒）过去。**
 2. 因此 `hasConfirmedTarget() == true` **不代表看得见** —— 它只说明"我还记得他"。
-   这条不变量被写进 `docs/ROADMAP.md` 的"经验"一节，但它同时也是 bug 重灾区：
+   这条不变量最容易被误解，同时也是 bug 重灾区：
    - 用它当**交战分支的条件** ⇒ 玩家消失后敌人继续对着记忆位置开枪（§7）；
    - 用它判断**"重新发现目标"** ⇒ 搜索的"已放弃"标记每步被清掉，敌人被钉在原地无限重播观察动作。
 3. 正确的"看得见吗"信号是 `timeSinceLastSeen(gameTime)`（只在**真正看见**时归零）：
