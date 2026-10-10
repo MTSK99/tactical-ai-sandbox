@@ -438,4 +438,5 @@ AI 的计时器（反应、冷却、搜索窗口）全部按逻辑时间；变�
 | A* 与堆 | `ai/Pathfinding.cpp` 的 `findPathImpl` / `heapSiftUp` / `smooth` |
 | 视线与弹道的几何 | `game/World.cpp` 的 `makeLineOfSightQuery` / `projectileBlockedAt` / `segmentIntersectsRect` |
 | 踩过的坑（按时间） | `docs/PLAYABLE_FIXES_2026-10-09.md` |
+| 写测试的教训 | `docs/TESTING_LESSONS.md`（8 条，都来自真实返工） |
 | 设计理由的原始出处 | `README.md`（含翻滚曲线、无敌帧、开火冷却等取舍说明） |
