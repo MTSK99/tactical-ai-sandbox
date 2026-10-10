@@ -17,8 +17,7 @@
 | 跑起来 / 录一段演示 | 下方「[快速开始](#快速开始)」 · [录制 GIF/视频](docs/RECORDING_GIF.md) |
 | 理解架构与设计取舍 | [docs/PROJECT_WALKTHROUGH.md](docs/PROJECT_WALKTHROUGH.md)（含演示脚本与预设问答） |
 | 看关键代码怎么写的 | [docs/CODE_WALKTHROUGH.md](docs/CODE_WALKTHROUGH.md)（10 个机制逐段解释） |
-| 知道踩过哪些坑 | [docs/PLAYABLE_FIXES_2026-10-09.md](docs/PLAYABLE_FIXES_2026-10-09.md) · [docs/REVIEW_2026-10-09.md](docs/REVIEW_2026-10-09.md) |
-| 看还差什么才能算作品 | [docs/SHOWCASE_GAP.md](docs/SHOWCASE_GAP.md) |
+| 知道踩过哪些坑 | [docs/PLAYABLE_FIXES_2026-10-09.md](docs/PLAYABLE_FIXES_2026-10-09.md) |
 
 > 上面那段动图是 `--demo`（内置驾驶员）录的，不是手打的：一条命令就能复现。
 > 录制方法见 [docs/RECORDING_GIF.md](docs/RECORDING_GIF.md)。
